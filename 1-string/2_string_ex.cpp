@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+//stringhe 2
 using namespace std;
 
 /*
