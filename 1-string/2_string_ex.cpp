@@ -8,8 +8,8 @@ using namespace std;
     TODO: stampa la lunghezza della string passata in input
 */
 void lunghezzaStringa(string stringa){
-
-    cout << "Da implementare" << endl;
+int x=stringa.size();
+    cout << "lunghezza:" <<x<< endl;
 
 }
 
@@ -20,9 +20,13 @@ void lunghezzaStringa(string stringa){
             altrimenti stampare "La parola ciao NON è presente"
 */
 void trovaCiao(string stringa){
+int x=stringa.find("ciao");
+ if(x>-1) {
+        cout << "la parola ciao e' presente" << endl;
+ }else{
+     cout<<"la parola ciao NON e' presente"<<endl;
+ }
 
-    cout << "Da implementare" << endl;
-    
 }
 
 
@@ -30,10 +34,14 @@ void trovaCiao(string stringa){
     replace()
     TODO: sostituire la parola "pizza" con la parola "pasta" e stampare la nuova stringa
 */
-void sostituisciPizzaConPasta(string stringa){
-    
-    cout << "Da implementare" << endl;
-    
+void sostituisciPizzaConPasta(string &stringa){
+    int x=stringa.find("pizza");
+if(x>-1){
+    stringa.replace(x,x+5,"pasta");
+    cout<<"sostituzione pizza con pasta: "<<stringa<<endl;
+}
+
+
 }
 
 
@@ -45,9 +53,11 @@ void sostituisciPizzaConPasta(string stringa){
 */
 void stampaPrimaParola(string stringa){
     // TODO
+    int z=stringa.find(" ");
+string x=stringa.substr(0,z);
+cout<<"prima parola:"<<x<<endl;
 
-    cout << "Da implementare" << endl;
-    
+
 }
 
 
@@ -56,9 +66,10 @@ void stampaPrimaParola(string stringa){
     TODO: inserire alla fine della stringa passata in input " Giovanni!" e stampare la nuova stringa
 */
 void aggiungiGiovanni(string frase){
+int x=frase.size();
+frase.insert(x," Giovanni");
+    cout << frase << endl;
 
-    cout << "Da implementare" << endl;
-    
 }
 
 int main()
@@ -71,11 +82,11 @@ int main()
 
 
     lunghezzaStringa(str);
-    //trovaCiao(str);
-    //sostituisciPizzaConPasta(str);
-    //stampaPrimaParola(str);
-    //aggiungiGiovanni(str);
-    
+    trovaCiao(str);
+    sostituisciPizzaConPasta(str);
+    stampaPrimaParola(str);
+    aggiungiGiovanni(str);
+
 
 
     return 0;
