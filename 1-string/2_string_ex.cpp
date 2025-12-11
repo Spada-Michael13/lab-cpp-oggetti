@@ -37,7 +37,7 @@ int x=stringa.find("ciao");
 void sostituisciPizzaConPasta(string stringa){
     int x=stringa.find("pizza");
 if(x>-1){
-    stringa.replace(x,x+5,"pasta");
+    stringa.replace(x,x,"pasta");
     cout<<"sostituzione pizza con pasta: "<<stringa<<endl;
 }
 
