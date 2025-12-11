@@ -34,7 +34,7 @@ int x=stringa.find("ciao");
     replace()
     TODO: sostituire la parola "pizza" con la parola "pasta" e stampare la nuova stringa
 */
-void sostituisciPizzaConPasta(string &stringa){
+void sostituisciPizzaConPasta(string stringa){
     int x=stringa.find("pizza");
 if(x>-1){
     stringa.replace(x,x+5,"pasta");
